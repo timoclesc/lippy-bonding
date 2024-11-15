@@ -35,7 +35,7 @@ const questions: question[] = [
   { id: 22, questionText: "MyGovId", category: "hard" },
   { id: 23, questionText: "Cyclone size", category: "easy" },
   { id: 24, questionText: "Religous / spiritual belief system", category: "medium" },
-  { id: 24, questionText: "National titles", category: "medium" },
+  { id: 24, questionText: "# of National titles", category: "medium" },
 ];
 
 export default function Home() {
@@ -84,7 +84,7 @@ export default function Home() {
   return (
     <Container>
       <Typography variant="h4" marginBlockEnd={2}>Lipper Scavenger Hunt</Typography>
-      <Typography variant="body1" marginBlockEnd={2}>Find people who have the same attributes as you. Put in their names to kep track</Typography>
+      <Typography variant="body1" marginBlockEnd={2}>Find people who have the same attributes as you. Put in their names against each field to keep track. You can&apos;t have the same person for more than one question, so search widely. Your score is totalled at the bottom of the page. The highest score doesn&apos;t necessarily win&hellip;</Typography>
       {['easy', 'medium', 'hard'].map(
         (dif, i) => (
           <Box key={dif} sx={{
