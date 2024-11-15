@@ -10,7 +10,13 @@ const roboto = Roboto({
   variable: '--font-roboto',
 });
 
- export default function RootLayout(props) {
+import { ReactNode } from 'react';
+
+interface RootLayoutProps {
+  readonly children: ReactNode;
+}
+
+export default function RootLayout(props: RootLayoutProps) {
    const { children } = props;
    return (
      <html lang="en">

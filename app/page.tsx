@@ -63,7 +63,7 @@ export default function Home() {
           setAnswers(JSON.parse(prevAnswers));
         }
       } catch (e) {
-
+        console.log(e);
       }
     }, []
   );
@@ -96,7 +96,7 @@ export default function Home() {
             <Typography variant="h5" textAlign={'center'} marginBlockEnd={2}>{dif.charAt(0).toUpperCase() + dif.slice(1)}</Typography>
             {
               questions.filter(q => q.category == dif).map((question) => {
-                let hasError = answers[question.id]?.length > 0
+                const hasError = answers[question.id]?.length > 0
                   && Object.values(answers).filter((answer) => answer === answers[question.id]).length > 1;
                 return (
                   <Box key={question.id} mb={2}>
